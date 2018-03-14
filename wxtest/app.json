@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/cart/cart",
+    "pages/home/home",
+    "pages/kind/kind",
+   
+    "pages/user/user",
+    "pages/login/login",
+    "pages/register/register",
+     "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f83673",
+    "navigationBarTitleText": "美丽说",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor":"#ff4f7b",
+    "borderStyle":"white",
+    "backgroundColor":"white",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text":"首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/homeing.png"
+    },{
+      "pagePath": "pages/kind/kind",
+      "text": "分类",
+      "iconPath": "images/kind.png",
+      "selectedIconPath": "images/kinding.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "images/cart.png",
+      "selectedIconPath": "images/carting.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/usering.png"
+    }]
+  }
+}

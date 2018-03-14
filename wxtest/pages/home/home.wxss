@@ -1,0 +1,165 @@
+.home-top {
+  width: 750rpx;
+  height: 90rpx;
+  display: flex; }
+  .home-top view:nth-child(1) {
+    width: 120rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home-top view:nth-child(1) image {
+      width: 50%;
+      height: 50%;
+      display: block; }
+  .home-top view:nth-child(2) {
+    flex: 1;
+    line-height: 90rpx; }
+    .home-top view:nth-child(2) input {
+      width: 100%;
+      margin-top: 17rpx;
+      height: 56rpx;
+      display: inline-block;
+      background: #f4f4f4;
+      border-radius: 30rpx;
+      border: 0;
+      text-indent: 24rpx; }
+  .home-top view:nth-child(3) {
+    width: 102rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home-top view:nth-child(3) image {
+      width: 50%;
+      height: 50%;
+      display: block; }
+
+.home-swiper {
+  width: 750rpx;
+  height: 360rpx; }
+  .home-swiper image {
+    width: 100%;
+    height: 100%;
+    display: block; }
+
+.home-nav {
+  width: 750rpx;
+  height: 184rpx;
+  margin-top: 10rpx; }
+  .home-nav image {
+    width: 20%;
+    height: 80%;
+    display: block;
+    float: left; }
+
+.home-goods {
+  width: 750rpx;
+  height: 764rpx; }
+  .home-goods .kongbai {
+    display: block;
+    width: 100%;
+    height: 20rpx;
+    background: #eeeeee; }
+  .home-goods .img1 {
+    width: 100%;
+    height: 430rpx; }
+    .home-goods .img1 image {
+      width: 100%;
+      height: 100%;
+      display: block; }
+  .home-goods .scrollx {
+    white-space: nowrap;
+    display: flex;
+    overflow-x: hidden; }
+    .home-goods .scrollx .h-goods {
+      width: 202rpx;
+      height: 292rpx;
+      margin-top: 15rpx;
+      margin-left: 20rpx;
+      display: inline-block;
+      font-size: 30rpx; }
+      .home-goods .scrollx .h-goods image {
+        width: 100%;
+        height: 70%;
+        display: block; }
+      .home-goods .scrollx .h-goods p:nth-child(2) {
+        color: #3f2a20;
+        display: -webkit-box;
+        overflow: hidden;
+        white-space: normal !important;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin-top: 10rpx; }
+      .home-goods .scrollx .h-goods p:nth-child(3) {
+        color: #f14a6b;
+        font-size: 35rpx;
+        margin-top: 15rpx; }
+
+.home-change {
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home-change li {
+    flex: 1;
+    text-align: center; }
+
+.homeBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .homeBox .tabList {
+    display: flex;
+    height: 44px;
+    background-color: #fff; }
+    .homeBox .tabList li {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 2px solid transparent; }
+      .homeBox .tabList li.active {
+        border-bottom: 2px solid #f66; }
+  .homeBox .homeList {
+    flex: 1;
+    background-color: #fff;
+    margin-top: 10px; }
+    .homeBox .homeList .proList {
+      width: 100%; }
+      .homeBox .homeList .proList .proItem {
+        width: 48%;
+        height: 240px;
+        overflow: hidden;
+        float: left;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin: 5px 1% 0; }
+        .homeBox .homeList .proList .proItem image {
+          width: 100%;
+          height: 160px; }
+        .homeBox .homeList .proList .proItem p:nth-child(2) {
+          color: #3f2a20;
+          display: -webkit-box;
+          overflow: hidden;
+          white-space: normal !important;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin-top: 10rpx; }
+        .homeBox .homeList .proList .proItem p:nth-child(3) {
+          color: #f14a6b;
+          font-size: 35rpx;
+          margin-top: 30rpx; }
+
+.detail-list {
+  width: 100%;
+  height: 92rpx; }

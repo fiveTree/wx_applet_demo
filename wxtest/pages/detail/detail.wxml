@@ -1,0 +1,177 @@
+<scroll-view scroll-y="true" style="height:100%;" class="detailscrolltop"> 
+<view class="detail-top">
+     <swiper class="detailList" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" bindchange="changepage" >
+    <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}"> 
+        <image src="{{item}}"></image>
+    </swiper-item>
+    </swiper>   
+    <view class="dt-page">
+        <p>{{index}}</p><p>/{{bannerList.length}}</p>
+    </view>
+</view>
+<view class="detail-news">
+    <p>{{itemInfoTitle}}</p>
+    <p>{{itemInfoDesc}}</p>
+    <view>
+        <p>￥{{itemInfoHighNowPrice}}</p>
+        <p>￥{{itemInfoHighPrice}}</p>
+        <p>{{itemInfoDiscountDesc}}</p>
+    </view>
+    <ul>
+        <li wx:for="{{columns}}" wx:key="{{index}}">{{item}}</li>
+    </ul>
+</view>
+<view class="detail-shop">
+    <span class="kongbai"></span>
+    <view> 
+         <image src="{{shopInfo.shopimg}}"></image>
+         <text class="p2">{{shopInfo.shopname}}</text>
+         <p>总销量　{{shopInfo.cGoods}}</p>
+         <p>全部宝贝　{{shopInfo.cSells}}</p>
+         <image src="./../../images/goshop.png"></image>
+          <ul>
+                <li  wx:for="{{score}}" wx:key="{{index}}">
+                    <p>{{item.name}}</p>
+                    <p>{{item.score}}</p>
+                    <span>{{item.isBetter?"高":"低"}}</span>
+                </li>
+            </ul>
+    </view>
+    <view>
+        <ul>
+             <li  wx:for="{{services}}" wx:key="{{index}}">
+                <image src="{{item.icon}}"></image>
+                <text>{{item.name}}</text>
+             </li>
+        </ul>
+    </view>
+    <span class="kongbai"></span>
+</view>
+<scroll-view   scroll-into-view="detail-list" class="scrollview">
+<view class="detail-list">
+    <ul>
+        <li class="active"><span>图文详情</span></li>
+        <li><span>商品参数</span></li>
+        <li><span>评价（{{cRate}}）</span></li>
+        <li><span>热卖推荐</span></li>
+    </ul>
+</view>
+<view class="detail-desc">
+   <view><i></i><p></p></view>
+    <view><p>{{desc}}</p></view>
+    <view><i></i><p></p></view>
+</view>
+<!--穿着效果-->
+<view wx:for="{{detailImage_list}}"  we:key="{{index}}">
+    <view class="dress">
+        <p>{{item.key}}</p>
+    </view>
+    <view>
+        <image wx:for="{{item.list}}" we:key="{{index}}" src="{{item}}" mode="widthFix"></image>
+    </view>
+</view>
+<view class="empty"></view>
+<!--商品参数-->
+<view class="dress">
+        <p>商品参数</p>
+    </view>
+<view class="detail-rule"  >
+    
+    <view class="detail-rule1"  wx:for="{{rule.tables[0]}}" wx:key="{{index}}">
+        <p>{{item[0]}}</p>
+        <p>{{item[1]}}</p>
+        <p>{{item[2]}}</p>
+    </view>
+</view>
+<view class="detail-rule"  >
+    
+    <view class="detail-rule1"  wx:for="{{sets}}" wx:key="{{index}}">
+        <p>{{item.key}}</p>
+        <p class="p-active">{{item.value}}</p>
+    </view>
+</view>
+<view class="empty"></view>
+<view class="dress">
+    <p>购买评价</p>
+</view>
+<view class="detail-rate" wx:for="{{rate}}" wx:key="{{index}}">
+    <view class="clear">
+        <image src="{{item.user.avatar}}"></image>
+        <p>{{item.user.uname}}</p>
+        <p>{{item.content}}</p>
+        <span>{{item.createdDate}}</span>
+        <p>{{item.style}}</p>
+        <p>{{item.explain}}</p>
+    </view>
+</view>
+<view class="empty"></view>
+<view class="homeBox">
+
+  <ul class="tabList">
+    <li class="{{currentIndex ==0 ? 'active':''}}" bindtap="changeIndex" data-index="0">
+      默认
+    </li>
+    <li class="{{currentIndex ==1 ? 'active':''}}" bindtap="changeIndex"  data-index="1">
+      最新
+    </li>
+    <li class="{{currentIndex ==2 ? 'active':''}}" bindtap="changeIndex"  data-index="2">
+      精选
+    </li>
+  </ul>
+  <swiper class="homeList" indicator-dots="{{indicatorDots1}}"
+    autoplay="{{autoplay1}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular1}}" duration="{{duration}}" bindchange="changeItem">
+      <swiper-item>
+        <scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" wx:for="{{goods1}}" wx:key="{{index}}">
+              <image src="{{item.show_pic}}"></image>
+              <p>{{item.goods_title}}</p>
+              <p>￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+	  		<scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" wx:for="{{goods2}}" wx:key="{{index}}">
+              <image src="{{item.show_pic}}"></image>
+              <p>{{item.goods_title}}</p>
+              <p>￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" wx:for="{{goods3}}" wx:key="{{index}}">
+              <image src="{{item.show_pic}}"></image>
+              <p>{{item.goods_title}}</p>
+              <p>￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
+</view>
+</scroll-view>
+</scroll-view>
+<!--底部购物车导航-->
+<view class="detail-footbar">
+    <!--客服-->
+    <view class="footbar-im">
+      <i class="iconfont"></i>
+      <span class="text">客服</span>
+    </view>
+    <!--店铺-->
+    <view class="footbar-shop">
+      <i class="iconfont"></i>
+      <span class="text">店铺</span>
+    </view>
+    <!--收藏-->
+    <view class="footbar-fav">
+      <i class="iconfont"></i>
+      <span class="text">收藏</span>
+    </view>
+    <!--购买-->
+    <view class="footbar-buy">
+      <span class="buy-cart">加入购物车</span>
+      <span class="buy-now">购买</span>
+    </view>
+</view>

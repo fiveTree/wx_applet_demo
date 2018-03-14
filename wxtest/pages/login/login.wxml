@@ -1,0 +1,12 @@
+<view class="login-content">
+    <view class="view1">
+        <image src="./../../images/qq.png"></image>
+    </view>
+    <view class="view2">
+        <input class="name" bindchange="name" type="text" placeholder="昵称/邮箱/手机号" />
+        <input  class="pass"  bindchange="pass" type="password" placeholder="密码" />
+        <button class="login" bindtap="login">登录</button>
+        <p>前往<span bindtap="toregister">注册</span></p>
+        <p><span bindtap="toHome">回到首页</span></p>
+     </view>
+</view>

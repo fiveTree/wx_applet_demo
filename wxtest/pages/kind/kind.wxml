@@ -1,0 +1,40 @@
+<view class="home-top">
+    <view>
+		<image src="./../../images/logo1.png"></image>
+	</view>
+	<view>
+		<input type="text" placeholder=""/>
+	</view>
+	<view>
+        <image src="./../../images/chat.png"></image>
+	</view>
+</view>
+<view class="allkind">
+<image src="./../../images/allkind.png"></image>
+</view>
+<view class="kind-title">
+<span class="kongbai"></span>
+    <ul >
+        <li wx:for="{{allkind}}">
+            <image src="{{item.image}}"></image>
+        </li>
+    </ul>
+</view>
+<view class="kindhot">
+    <span class="kongbai"></span>
+    <image src="./../../images/kindHot.png"></image>
+</view>
+<view class="king-goods" wx:for="{{kindgoods}}">
+    <view>
+        <p>{{item.img[0].title}}</p>
+        <span>查看更多</span>
+    </view>
+    <view>
+        <image src="{{item.img[0].image}}"></image>
+        <image src="{{item.img[1].image}}"></image>
+        <image src="{{item.img[2].image}}"></image>
+        <image src="{{item.img[3].image}}"></image>
+        <image src="{{item.img[4].image}}"></image>
+    </view>
+</view>
+

@@ -1,0 +1,108 @@
+<view class="home-top">
+    <view>
+		<image src="./../../images/logo1.png"></image>
+	</view>
+	<view>
+		<input type="text" placeholder=""/>
+	</view>
+	<view>
+        <image src="./../../images/chat.png"></image>
+	</view>
+</view>
+<swiper class="home-swiper" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" >
+    <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}"> 
+        <image src="{{item.image}}"></image>
+    </swiper-item>
+</swiper>
+<view class="home-nav">
+	<image src="./../../images/new.png"></image>
+	<image src="./../../images/sale.png"></image>
+	<image src="./../../images/official.png"></image>
+	<image src="./../../images/dress.png"></image>
+	<image src="./../../images/fashion.png"></image>
+</view>
+<view class="home-goods">
+	<span class="kongbai"></span>
+	<view class="img1">
+		<image src="{{img1}}"></image>
+	</view>
+	<scroll-view scroll-x="true"  class="scrollx">
+		<view bindtap="toDetail" data-goodsID="001" wx:for="{{twitter1}}" wx:key="{{index}}" class="h-goods">
+			<image  data-goodsID="001" src="{{item.show_pic}}"></image>
+			<p  data-goodsID="001">{{item.goods_title}}</p>
+			<p  data-goodsID="001">￥{{item.goods_price}}</p>
+		</view>
+	</scroll-view>
+</view>
+<view class="home-goods">
+	<span class="kongbai"></span>
+	<view class="img1">
+		<image src="{{img2}}"></image>
+	</view>
+	<scroll-view scroll-x="true"  class="scrollx">
+		<view bindtap="toDetail" data-goodsID="002" wx:for="{{twitter2}}" wx:key="{{index}}"class="h-goods">
+			<image data-goodsID="002" src="{{item.show_pic}}"></image>
+			<p data-goodsID="002">{{item.goods_title}}</p>
+			<p data-goodsID="002">￥{{item.goods_price}}</p>
+		</view>
+	</scroll-view>
+</view>
+<view class="home-goods">
+	<span class="kongbai"></span>
+	<view class="img1">
+		<image src="{{img3}}"></image>
+	</view>
+	<scroll-view scroll-x="true"  class="scrollx">
+		<view bindtap="toDetail" data-goodsID="003" wx:for="{{twitter3}}" wx:key="{{index}}" class="h-goods">
+			<image data-goodsID="003" src="{{item.show_pic}}"></image>
+			<p data-goodsID="003">{{item.goods_title}}</p>
+			<p data-goodsID="003">￥{{item.goods_price}}</p>
+		</view>
+	</scroll-view>
+	<span class="kongbai"></span>
+</view>
+<view class="homeBox">
+
+  <ul class="tabList">
+    <li class="{{currentIndex ==0 ? 'active':''}}" bindtap="changeIndex" data-index="0">
+      默认
+    </li>
+    <li class="{{currentIndex ==1 ? 'active':''}}" bindtap="changeIndex"  data-index="1">
+      最新
+    </li>
+    <li class="{{currentIndex ==2 ? 'active':''}}" bindtap="changeIndex"  data-index="2">
+      精选
+    </li>
+  </ul>
+  <swiper class="homeList" indicator-dots="{{indicatorDots1}}"
+    autoplay="{{autoplay1}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular1}}" duration="{{duration}}" bindchange="changeItem">
+      <swiper-item>
+        <scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" data-goodsID="004"  wx:for="{{goods1}}" wx:key="{{index}}">
+              <image data-goodsID="004" src="{{item.show_pic}}"></image>
+              <p data-goodsID="004" >{{item.goods_title}}</p>
+              <p data-goodsID="004" >￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+	  		<scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" data-goodsID="004"  wx:for="{{goods2}}" wx:key="{{index}}">
+              <image src="{{item.show_pic}}"></image>
+              <p>{{item.goods_title}}</p>
+              <p>￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view class="proList"  scroll-y="true" style="height: 100%;">
+          <view class="proItem" bindtap="toDetail" data-goodsID="004"  wx:for="{{goods3}}" wx:key="{{index}}">
+              <image src="{{item.show_pic}}"></image>
+              <p>{{item.goods_title}}</p>
+              <p>￥{{item.goods_price}}</p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
+</view>

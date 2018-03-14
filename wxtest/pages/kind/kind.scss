@@ -1,0 +1,143 @@
+.home-top{
+    width:750rpx;
+    height:90rpx;
+    display: flex;
+    view{
+        &:nth-child(1){
+            width:120rpx;
+            height:90rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image{
+                width:50%;
+                height:50%;
+                display: block;
+            }
+        }
+        &:nth-child(2){
+            flex: 1;
+            line-height: 90rpx;
+            input{
+                  width:100%;
+                  margin-top:17rpx;
+                   height:56rpx;
+                   display: inline-block;
+                   background:#f4f4f4;
+                   border-radius:50rpx;
+                   border:0;
+                   text-indent: 24rpx;
+            }
+        }
+        &:nth-child(3){
+            width:102rpx;
+            height:90rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image{
+                width:50%;
+                height:50%;
+                display: block;
+            }
+        }
+    }
+}
+.allkind{
+    width:750rpx;
+    height:120rpx;
+    image{
+        width:100%;
+        height:100%;
+        display: block;
+    }
+}
+.kind-title{
+    width:750rpx;
+    .kongbai{
+        display: block;
+        width:100%;
+        height:20rpx;
+        background: #eeeeee;
+    }
+    li{
+        margin-top:2%;
+        width:33.3%;
+        height:200rpx;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         image{
+             width:100%;
+             height:100%;
+             display: block;
+            
+         }
+    }
+}
+.kindhot{
+     width:750rpx;
+     overflow: hidden;
+    .kongbai{
+        display: block;
+        width:100%;
+        height:20rpx;
+        background: #eeeeee;
+    }
+    image{
+        width:100%;
+        height:120rpx;
+        display: block;
+    }
+}
+.king-goods{
+    width:750rpx;
+    overflow: hidden;
+    margin-bottom:50rpx;
+    view:nth-child(1){
+        width:100%;
+        height:86rpx;
+        border-top:2rpx solid #f8f8f8;
+        border-bottom:2rpx solid #f8f8f8;
+        p{
+            margin-left:40rpx;
+            line-height: 86rpx;
+            font-size: 32rpx;
+            color:#333333;
+        }
+        span{
+            float: right;
+            margin-right:40rpx;
+            line-height: 86rpx;
+            font-size: 32rpx;
+            color:#ff3366;
+        }
+    }
+    view:nth-child(2){
+        width:100%;
+        image{
+            float: left;
+            &:nth-child(1){
+                width:298rpx;
+                height:538rpx;
+                display: block;
+                border-right:2rpx solid #f8f8f8;
+            }
+            &:nth-child(2),&:nth-child(4){
+                width:226rpx;
+                height:268rpx;
+                display: block;
+                border-right:2rpx solid #f8f8f8;
+                 border-bottom:2rpx solid #f8f8f8;
+            }
+            &:nth-child(3),&:nth-child(5){
+                width:222rpx;
+                height:268rpx;
+                display: block;
+                
+                 border-bottom:2rpx solid #f8f8f8;
+            }
+        }
+    }
+}
