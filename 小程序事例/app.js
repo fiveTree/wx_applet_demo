@@ -9,6 +9,8 @@ App({
   },
   onHide: function () {
     console.log('App Hide')
+    console.log('App Show test1')
+    
   },
   globalData: {
     hasLogin: false,
