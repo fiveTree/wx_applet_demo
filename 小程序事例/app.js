@@ -5,7 +5,7 @@ App({
     console.log('App Launch test1')
   },
   onShow: function () {
-    console.log('App Show')
+    console.log('App Show test1')
   },
   onHide: function () {
     console.log('App Hide')
